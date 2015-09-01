@@ -1,1 +1,1 @@
-D3 data visualization tutorials.
+JavaScript data visualization tutorials.
