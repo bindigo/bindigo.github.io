@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PtMind Feedback Center</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="../dist/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<!-- style for share buttons -->
+<style type="text/css">
+
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+</style>
+
+<script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Feedback Center</a>
+
+            </div>
+            <center>Get closer to your customers.
+              <a href="help.gaheatmaps.com">Join Community.</a>
+            </center>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Home</a>
+                        </li>
+                        <li>
+                            <a href="index_allen.html"><i class="fa fa-dashboard fa-fw"></i> Home Allen</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa arrow"></i>Details</a>
+                            <ul class='nav nav-second-level'>
+                              <li>
+                                <a href='details.html'><i class="fa fa-comments-o"></i> All</a>
+                              </li>
+                              <li>
+                                <a href='emails.html'><i class="fa fa-envelope-o"></i> Emails</a>
+                              </li>
+                              <li>
+                                <a href='tickets.html'><i class="fa fa-support"></i> Tickets</a>
+                              </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="analytics.html"><i class="fa fa-bar-chart-o fa-fw"></i> Analytics</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Analytics</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+              <div id='chart1' style="width:640;height:480px" class="col-lg-12">
+
+              </div>
+            </div>
+            <div class="row">
+              <div id='chart2' style="width:640;height:480px" class="col-lg-12">
+
+              </div>
+            </div>
+            <div class="row">
+              <div id='chart3' style="width:640;height:480px" class="col-lg-12">
+
+              </div>
+            </div>
+            <div class="row">
+              <div id='chart4' style="width:640;height:480px" class="col-lg-12">
+
+              </div>
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../bower_components/raphael/raphael-min.js"></script>
+    <script src="../bower_components/morrisjs/morris.min.js"></script>
+    <script src="../js/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!-- chart1 -->
+    <script>
+    var labelTop = {
+      normal : {
+          label : {
+              show : true,
+              position : 'center',
+              formatter : '{b}',
+              textStyle: {
+                  baseline : 'bottom'
+              }
+          },
+          labelLine : {
+              show : false
+          }
+      }
+    };
+    var labelFromatter = {
+      normal : {
+          label : {
+              formatter : function (params){
+                  return 100 - params.value + '%'
+              },
+              textStyle: {
+                  baseline : 'top'
+              }
+          }
+      },
+    }
+    var labelBottom = {
+      normal : {
+          color: '#ccc',
+          label : {
+              show : true,
+              position : 'center'
+          },
+          labelLine : {
+              show : false
+          }
+      },
+      emphasis: {
+          color: 'rgba(0,0,0,0)'
+      }
+    };
+    var radius = [40, 55];
+    c1_option = {
+      legend: {
+          x : 'center',
+          y : 'center',
+          data:[
+              'Hangouts','Facebook','Youtube','Google+','Weixin',
+              'Twitter', 'Skype', 'Messenger', 'Whatsapp', 'Instagram'
+          ]
+      },
+      title : {
+          text: 'Data sources',
+          subtext: 'PtMind Inc.',
+          x: 'center'
+      },
+      toolbox: {
+          show : true,
+          feature : {
+              dataView : {show: true, readOnly: false},
+              magicType : {
+                  show: true,
+                  type: ['pie', 'funnel'],
+                  option: {
+                      funnel: {
+                          width: '20%',
+                          height: '30%',
+                          itemStyle : {
+                              normal : {
+                                  label : {
+                                      formatter : function (params){
+                                          return 'other\n' + params.value + '%\n'
+                                      },
+                                      textStyle: {
+                                          baseline : 'middle'
+                                      }
+                                  }
+                              },
+                          }
+                      }
+                  }
+              },
+              restore : {show: true},
+              saveAsImage : {show: true}
+          }
+      },
+      series : [
+          {
+              type : 'pie',
+              center : ['10%', '30%'],
+              radius : radius,
+              x: '0%', // for funnel
+              itemStyle : labelFromatter,
+              data : [
+                  {name:'other', value:46, itemStyle : labelBottom},
+                  {name:'Hangouts', value:54,itemStyle : labelTop}
+              ]
+          },
+          {
+              type : 'pie',
+              center : ['30%', '30%'],
+              radius : radius,
+              x:'20%', // for funnel
+              itemStyle : labelFromatter,
+              data : [
+                  {name:'other', value:56, itemStyle : labelBottom},
+                  {name:'Facebook', value:44,itemStyle : labelTop}
+              ]
+          },
+          {
+              type : 'pie',
+              center : ['50%', '30%'],
+              radius : radius,
+              x:'40%', // for funnel
+              itemStyle : labelFromatter,
+              data : [
+                  {name:'other', value:65, itemStyle : labelBottom},
+                  {name:'Youtube', value:35,itemStyle : labelTop}
+              ]
+          },
+          {
+              type : 'pie',
+              center : ['70%', '30%'],
+              radius : radius,
+              x:'60%', // for funnel
+              itemStyle : labelFromatter,
+              data : [
+                  {name:'other', value:70, itemStyle : labelBottom},
+                  {name:'Google+', value:30,itemStyle : labelTop}
+              ]
+          },
+          {
+              type : 'pie',
+              center : ['90%', '30%'],
+              radius : radius,
+              x:'80%', // for funnel
+              itemStyle : labelFromatter,
+              data : [
+                  {name:'other', value:73, itemStyle : labelBottom},
+                  {name:'Weixin', value:27,itemStyle : labelTop}
+              ]
+          },
+          {
+              type : 'pie',
+              center : ['10%', '70%'],
+              radius : radius,
+              y: '55%',   // for funnel
+              x: '0%',    // for funnel
+              itemStyle : labelFromatter,
+              data : [
+                  {name:'other', value:78, itemStyle : labelBottom},
+                  {name:'Twitter', value:22,itemStyle : labelTop}
+              ]
+          },
+          {
+              type : 'pie',
+              center : ['30%', '70%'],
+              radius : radius,
+              y: '55%',   // for funnel
+              x:'20%',    // for funnel
+              itemStyle : labelFromatter,
+              data : [
+                  {name:'other', value:78, itemStyle : labelBottom},
+                  {name:'Skype', value:22,itemStyle : labelTop}
+              ]
+          },
+          {
+              type : 'pie',
+              center : ['50%', '70%'],
+              radius : radius,
+              y: '55%',   // for funnel
+              x:'40%', // for funnel
+              itemStyle : labelFromatter,
+              data : [
+                  {name:'other', value:78, itemStyle : labelBottom},
+                  {name:'Messenger', value:22,itemStyle : labelTop}
+              ]
+          },
+          {
+              type : 'pie',
+              center : ['70%', '70%'],
+              radius : radius,
+              y: '55%',   // for funnel
+              x:'60%', // for funnel
+              itemStyle : labelFromatter,
+              data : [
+                  {name:'other', value:83, itemStyle : labelBottom},
+                  {name:'Whatsapp', value:17,itemStyle : labelTop}
+              ]
+          },
+          {
+              type : 'pie',
+              center : ['90%', '70%'],
+              radius : radius,
+              y: '55%',   // for funnel
+              x:'80%', // for funnel
+              itemStyle : labelFromatter,
+              data : [
+                  {name:'other', value:89, itemStyle : labelBottom},
+                  {name:'Instagram', value:11,itemStyle : labelTop}
+              ]
+          }
+      ]
+    };
+
+    var c1 = echarts.init(
+      document.getElementById('chart1')
+    );
+    c1.setOption(c1_option);
+    </script>
+
+    <!-- chart2 -->
+    <script>
+    c2_option = {
+      tooltip : {
+          trigger: 'axis'
+      },
+      legend: {
+          data:['Emails','Focus Reviews','Facebook','Twitter','Google']
+      },
+      toolbox: {
+          show : true,
+          feature : {
+              mark : {show: true},
+              dataView : {show: true, readOnly: false},
+              magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+              restore : {show: true},
+              saveAsImage : {show: true}
+          }
+      },
+      calculable : true,
+      xAxis : [
+          {
+              type : 'category',
+              boundaryGap : false,
+              data : ['周一','周二','周三','周四','周五','周六','周日']
+          }
+      ],
+      yAxis : [
+          {
+              type : 'value'
+          }
+      ],
+      series : [
+          {
+              name:'Emails',
+              type:'line',
+              stack: 'All',
+              itemStyle: {normal: {areaStyle: {type: 'default'}}},
+              data:[120, 132, 101, 134, 90, 230, 210]
+          },
+          {
+              name:'Focus Reviews',
+              type:'line',
+              stack: 'All',
+              itemStyle: {normal: {areaStyle: {type: 'default'}}},
+              data:[220, 182, 191, 234, 290, 330, 310]
+          },
+          {
+              name:'Facebook',
+              type:'line',
+              stack: 'All',
+              itemStyle: {normal: {areaStyle: {type: 'default'}}},
+              data:[150, 232, 201, 154, 190, 330, 410]
+          },
+          {
+              name:'Twitter',
+              type:'line',
+              stack: 'All',
+              itemStyle: {normal: {areaStyle: {type: 'default'}}},
+              data:[320, 332, 301, 334, 390, 330, 320]
+          },
+          {
+              name:'Google',
+              type:'line',
+              stack: 'All',
+              itemStyle: {normal: {areaStyle: {type: 'default'}}},
+              data:[820, 932, 901, 934, 1290, 1330, 1320]
+          }
+      ]
+    };
+
+    var c2 = echarts.init(
+      document.getElementById('chart2')
+    );
+    c2.setOption(c2_option);
+    </script>
+
+    <!-- chart3 -->
+    <script>
+    c3_option = {
+        color : [
+            'rgba(255, 69, 0, 0.5)',
+            'rgba(255, 150, 0, 0.5)',
+            'rgba(255, 200, 0, 0.5)',
+            'rgba(155, 200, 50, 0.5)',
+            'rgba(55, 200, 100, 0.5)'
+        ],
+        title : {
+            text: 'Funnels',
+            subtext: 'PtMind Inc.'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c}%"
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        legend: {
+            data : ['Show up','Clicks','Visits','Quotes','Orders']
+        },
+        calculable : true,
+        series : [
+            {
+                name:'Expected',
+                type:'funnel',
+                x: '10%',
+                width: '80%',
+                itemStyle: {
+                    normal: {
+                        label: {
+                            formatter: '{b}Expected'
+                        },
+                        labelLine: {
+                            show : false
+                        }
+                    },
+                    emphasis: {
+                        label: {
+                            position:'inside',
+                            formatter: '{b}Expected : {c}%'
+                        }
+                    }
+                },
+                data:[
+                    {value:60, name:'Visists'},
+                    {value:40, name:'Quotes'},
+                    {value:20, name:'Orders'},
+                    {value:80, name:'Clicks'},
+                    {value:100, name:'Show up'}
+                ]
+            },
+            {
+                name:'Actual',
+                type:'funnel',
+                x: '10%',
+                width: '80%',
+                maxSize: '80%',
+                itemStyle: {
+                    normal: {
+                        borderColor: '#fff',
+                        borderWidth: 2,
+                        label: {
+                            position: 'inside',
+                            formatter: '{c}%',
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        }
+                    },
+                    emphasis: {
+                        label: {
+                            position:'inside',
+                            formatter: '{b}Actual : {c}%'
+                        }
+                    }
+                },
+                data:[
+                    {value:30, name:'Visits'},
+                    {value:10, name:'Quotes'},
+                    {value:5, name:'Orders'},
+                    {value:50, name:'Clicks'},
+                    {value:80, name:'Show up'}
+                ]
+            }
+        ]
+    };
+
+    var c3 = echarts.init(
+      document.getElementById('chart3')
+    );
+    c3.setOption(c3_option);
+    </script>
+
+    <!-- chart4 -->
+    <script>
+    c4_option = {
+        title : {
+            text: 'Zendesk Tickets',
+            subtext: 'PtMi.nd Inc',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient : 'vertical',
+            x : 'left',
+            data:['Direct','Emails','Builtin','Manual','Zendesk']
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {
+                    show: true,
+                    type: ['pie', 'funnel'],
+                    option: {
+                        funnel: {
+                            x: '25%',
+                            width: '50%',
+                            funnelAlign: 'left',
+                            max: 1548
+                        }
+                    }
+                },
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        series : [
+            {
+                name:'Sources',
+                type:'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:[
+                    {value:335, name:'Direct'},
+                    {value:310, name:'Emails'},
+                    {value:234, name:'Builtin'},
+                    {value:135, name:'Manual'},
+                    {value:1548, name:'Zendesk'}
+                ]
+            }
+        ]
+    };
+
+    var c4 = echarts.init(
+      document.getElementById('chart4')
+    );
+    c4.setOption(c4_option);
+    </script>
+
+</body>
+
+</html>

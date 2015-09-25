@@ -39,6 +39,18 @@
 </head>
 
 <body>
+<!-- style for share buttons -->
+<style type="text/css">
+
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+</style>
 
     <div id="wrapper">
 
@@ -90,7 +102,21 @@
                             <a href="index_allen.html"><i class="fa fa-dashboard fa-fw"></i> Home Allen</a>
                         </li>
                         <li>
-                            <a href="details.html"><i class="fa fa-comments-o fa-fw"></i>Details</a>
+                            <a href="#"><i class="fa arrow"></i>Details</a>
+                            <ul class='nav nav-second-level'>
+                              <li>
+                                <a href='details.html'><i class="fa fa-comments-o"></i> All</a>
+                              </li>
+                              <li>
+                                <a href='emails.html'><i class="fa fa-envelope-o"></i> Emails</a>
+                              </li>
+                              <li>
+                                <a href='tickets.html'><i class="fa fa-support"></i> Tickets</a>
+                              </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="analytics.html"><i class="fa fa-bar-chart-o fa-fw"></i> Analytics</a>
                         </li>
                     </ul>
                 </div>
@@ -102,13 +128,13 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Home</h1>
+                    <h1 class="page-header">All</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                           <div class="row">
@@ -116,31 +142,85 @@
                               What they say
                             </div>
                             <div class="col-md-2">
-                              <u>More</u>
+                              <u></u>
                             </div>
                           </div>
                         </div>
                         <div class="panel-body">
                             <p>Josh said:</p>
+                            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
                             <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                            <br />
+                            <div class="row">
+                              <div class='col-md-10'>
+                                15.Sep.2015
+                              </div>
+                              <div class='col-md-2'>
+                                From Allen
+                              </div>
+                            </div>
+                            <br />
+                            <div class='row'>
+                              <div class='col-md-3'>
+                                <video width='160', height='100' controls>
+                                  <source src='../videos/small.mp4' type='video/mp4' />
+                                </video>
+                              </div>
+                              <div class='col-md-3'>
+                                <a href="../images/img.png">
+                                  <img src="../images/img.png" height="100" width="160" />
+                                </a>
+                              </div>
+                              <div class='col-md-3'>
+                                <a href="../images/img.png">
+                                  <img src="../images/img.png" height="100" width="160" />
+                                </a>
+                              </div>
+                            </div>
                         </div>
                         <div class="panel-footer">
                             <div class="row">
                               <div class="col-md-8">
-                                15.Sep.2015
+                                Comments: <input type="text" size="60" />
                               </div>
                               <div class="col-md-4">
-                                From: Allen
+                                <div id="share-buttons">
+                                  <!-- Email -->
+                                  <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 http://bindigo.github.io">
+                                      <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+                                  </a>
+
+                                  <!-- Facebook -->
+                                  <a href="http://www.facebook.com/sharer.php?u=http://bindigo.github.io" target="_blank">
+                                      <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                                  </a>
+
+                                  <!-- Google+ -->
+                                  <a href="https://plus.google.com/share?url=http://bindigo.github.io/" target="_blank">
+                                      <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+                                  </a>
+
+                                  <!-- LinkedIn -->
+                                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://bindigo.github.io" target="_blank">
+                                      <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                                  </a>
+
+                                  <!-- Twitter -->
+                                  <a href="https://twitter.com/share?url=http://bindigo.github.io&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                                      <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                                  </a>
+                                </div>
                               </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="row">
@@ -148,92 +228,72 @@
                                 Their pains
                               </div>
                               <div class="col-md-2">
-                                <u>More</u>
+                                <u></u>
                               </div>
                             </div>
                         </div>
                         <div class="panel-body">
                           <p>James said:</p>
+                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
                           <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                          <br />
+                          <div class="row">
+                            <div class='col-md-10'>
+                              15.Sep.2015
+                            </div>
+                            <div class='col-md-2'>
+                              From Allen
+                            </div>
+                          </div>
+                          <br />
+                          <div class='row'>
+                            <div class='col-md-3'>
+                              <video width='160', height='100' controls>
+                                <source src='../videos/small.mp4' type='video/mp4' />
+                              </video>
+                            </div>
+                            <div class='col-md-3'>
+                              <a href="../images/img.png">
+                                <img src="../images/img.png" height="100" width="160" />
+                              </a>
+                            </div>
+                          </div>
                         </div>
                         <div class="panel-footer">
                             <div class="row">
                               <div class="col-md-8">
-                                15.Sep.2015
+                                Comments: <input type="text" size="60" />
                               </div>
                               <div class="col-md-4">
-                                From: Ptengine
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-md-10">
-                                Gossips
-                              </div>
-                              <div class="col-md-2">
-                                <u>More</u>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="panel-body">
-                          <p>Josh said:</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                        </div>
-                        <div class="panel-footer">
-                            <div class="row">
-                              <div class="col-md-8">
-                                13.Sep.2015
-                              </div>
-                              <div class="col-md-4">
-                                From: Twitter
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="panel panel-warning">
-                        <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-md-10">
-                                They need help
-                              </div>
-                              <div class="col-md-2">
-                                <u>More</u>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="panel-body">
-                          <p>Josh said:</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                        </div>
-                        <div class="panel-footer">
-                            <div class="row">
-                              <div class="col-md-8">
-                                12.Sep.2015
-                              </div>
-                              <div class="col-md-4">
-                                From: Ticket
+                                <div id="share-buttons">
+                                  <!-- Email -->
+                                  <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 http://bindigo.github.io">
+                                      <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+                                  </a>
+
+                                  <!-- Facebook -->
+                                  <a href="http://www.facebook.com/sharer.php?u=http://bindigo.github.io" target="_blank">
+                                      <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                                  </a>
+
+                                  <!-- Google+ -->
+                                  <a href="https://plus.google.com/share?url=http://bindigo.github.io/" target="_blank">
+                                      <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+                                  </a>
+
+                                  <!-- LinkedIn -->
+                                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://bindigo.github.io" target="_blank">
+                                      <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                                  </a>
+
+                                  <!-- Twitter -->
+                                  <a href="https://twitter.com/share?url=http://bindigo.github.io&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                                      <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                                  </a>
+                                </div>
                               </div>
                             </div>
                         </div>
